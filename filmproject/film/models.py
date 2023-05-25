@@ -65,6 +65,7 @@ class CommentModel(models.Model):
 
     class Meta:
         verbose_name = "Comment"
+        ordering = ('-id', )
 
     def __str__(self):
         return self.user.username + " | " + self.film.name

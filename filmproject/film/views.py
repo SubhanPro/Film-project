@@ -44,10 +44,11 @@ def detail(request, id):
                 like = LikeModel.objects.create(
                     user = request.user,
                     film = film_obj
-                )
+                )  
             else:
                 like = LikeModel.objects.get(user = request.user, film = film_obj)
                 like.delete()
+        return redirect('detail', id = film.id)
     return render(request, 'detail.html', context)
 
 def delete_comment(request, id):

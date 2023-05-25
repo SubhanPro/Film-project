@@ -38,7 +38,7 @@
     <div class="container">
         <form method="POST">
           {% csrf_token %}
-          <input type="hidden" name="choice" id="comment">
+          <input type="hidden" name="choice" id="comment" value="comment">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Content</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="content">
